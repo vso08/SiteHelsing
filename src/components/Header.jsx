@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import reactLogo from '../assets/react.svg';
 
 const Header = () => {
@@ -31,12 +31,12 @@ const Header = () => {
 
     return (
         <header>
-            <nav className="border-black flex justify-between relative lg:fixed w-screen z-5 x-" style={BackgroundColor}>
-                <div className="Logo ps-0 xl:ps-40 md:ps-40 sm:ps-20">
+            <nav className="border-black flex justify-center relative lg:fixed w-screen z-5 lg:justify-between p-0 mt-0" style={BackgroundColor}>
+                <div className="Logo ps-0 xl:ps-40 lg:ps-40">
                     <img src={reactLogo} className='w-12 h-12' alt="React Logo" />
                 </div>
                 <div className='w-full justify-between hidden lg:block pe-20 lg:pe-40 '>
-                    <ul className="list-none p-3 gap-20 xl:gap-40 visible flex flex-row w-full justify-end text-white text-lg xl:text-xl">
+                    <ul className="list-none p-3 gap-10 xl:gap-20 visible flex flex-row w-full justify-end text-white text-sm xl:text-xl lg:text-lg">
                         <li>
                             <a href="" className=''>História</a>
                         </li>
@@ -55,9 +55,9 @@ const Header = () => {
                 </div>
             </nav>
 
-            <nav className={`fle w-screen fixed lg:relative text-white ${isScrolled ? 'top-0' : 'top-12'}`} style={NavLgBgColor}>
-                <div className='w-full visible lg:hidden pe-20 lg:pe-40'>
-                    <ul className="list-none p-3 gap-20 lg:gap-40 visible flex flex-row w-full justify-end">
+            <nav className={` w-screen fixed lg:relative text-white ${isScrolled ? 'top-0' : 'top-12'}`} style={NavLgBgColor}>
+                <div className='w-full visible lg:hidden pe-0 lg:pe-40'>
+                    <ul className="list-none p-3 gap-28 lg:gap-40 visible flex flex-row w-full justify-center text-sm sm:text-lg ">
                         <li>
                             <a href="" className=''>História</a>
                         </li>
@@ -66,11 +66,6 @@ const Header = () => {
                         </li>
                         <li>
                             <a href="">Chefões</a>
-                        </li>
-                        <li>
-                            <button className='border px-10 rounded-xl text-white bg-gradient-to-r from-yellow-300 to-red-600 outline outline-black outline-1 border-black hidden lg:visible'>
-                                Download
-                            </button>
                         </li>
                     </ul>
                 </div>
